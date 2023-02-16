@@ -1,0 +1,164 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: rgb(9, 121, 114);
+    background: linear-gradient(90deg, rgba(9, 121, 114, 0.9) 0%, rgba(0, 219, 255, 1) 24%, rgba(9, 54, 121, 0.95) 51%);
+    color: white;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem;
+    padding-top: 0;
+}
+
+.navbar h2 {
+    margin-right: auto;
+    justify-self: right;
+    align-self: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.lg-screen {
+    align-self: center;
+}
+
+.lg-screen .navTags {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    justify-self: space-around;
+    align-self: center;
+    margin-right: 1rem;
+}
+
+.lg-screen .signupBtn {
+    color: white;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 2px solid white;
+    height: 75%;
+    align-self: center;
+    margin-right: 2rem;
+    padding: 0.3rem;
+}
+
+.signupBtn:hover {
+    color: rgba(9, 121, 114, 0.9);
+    border: 2px solid rgb(0, 162, 255);
+}
+
+.signupBtn:active {
+    transform: scale(0.98);
+    box-shadow: inset 2px 1px rgb(0, 162, 255);
+}
+.hamburger-menu {
+    position: fixed;
+    right: 0;
+    display: none;
+    margin-right: 1.5rem;
+    margin-top: 0.25rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    height: 2.5rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.bar-top,
+.bar-middle,
+.bar-bottom {
+    display: none;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    margin: 3px 0;
+    transform-origin: right;
+    transition: all 0.5s;
+}
+
+.bar-top-active {
+    transform: rotate(-45deg);
+}
+
+.bar-bottom-active {
+    transform: rotate(45deg);
+}
+
+.bar-middle-active {
+    opacity: 0;
+    transform: translateX(1rem);
+}
+
+.drop-down {
+    position: fixed;
+    right: 0;
+    display: none;
+    margin-top: 3rem;
+    margin-right: 0;
+    background-color: rgba(9, 54, 121, 0.95);
+    height: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    z-index: 1000;
+}
+
+.drop-down-active {
+    display: block;
+}
+
+.drop-down-list {
+    list-style: none;
+
+}
+
+.list-item a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.signupBtn {
+    padding: 0.2rem 0.5rem;
+    margin-top: 5px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 680px) {
+
+    .lg-screen {
+        display: none;
+    }
+    
+    .bar-top,
+    .bar-middle,
+    .bar-bottom {
+        display: block;
+    }
+
+    .hamburger-menu:hover .bar-top {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger-menu:hover .bar-middle {
+        transform: translateX(1rem);
+        opacity: 0;
+    }
+
+    .hamburger-menu:hover .bar-bottom {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-menu:hover+.drop-down {
+        display: block;
+    }
+
+}

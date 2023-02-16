@@ -1,0 +1,19 @@
+.error-msg {
+    font-size: 1.3rem;
+    color: red;
+    font-weight: bold;
+    margin-top: 5rem;
+}
+
+.error-msg,
+.contact-support {
+    text-align: center;
+}
+
+.error-msg::first-letter {
+    text-transform: capitalize;
+}
+.contact-support{
+    font-size: 1rem;
+    font-style: italic;
+}

@@ -1,0 +1,24 @@
+.page-layout {
+    margin-top: 1.5rem;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 3;
+    grid-template-columns: 70% 27%;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas:
+        " trending quick-read"
+        "blogs quick-read";
+    gap: 1rem 2rem;
+}
+
+@media screen and (max-width: 680px) {
+    .page-layout {
+        grid-template-rows: 3;
+        grid-template-columns: 70% 27%;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas:
+            " trending trending"
+            "quick-read quick-read"
+            "blogs blogs";
+    }
+}
